@@ -13,6 +13,7 @@ import { TestComponent } from './test/test.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { MenuComponent } from './menu/menu.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ConfigComponent } from './config/config.component';
 
 @NgModule({
@@ -32,7 +33,9 @@ import { ConfigComponent } from './config/config.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
