@@ -14,14 +14,14 @@ import { HomeactividadesComponent } from '../homeactividades/homeactividades.com
 export class ActividadComponent implements OnInit {
   // @Input() currentActivity: Activity;
   activities: Activity[] = null;
- 
+
   private _aid: number;
-  
+
   currentActivity: Activity;
-  
+
   // = new Activity(0,"","","","","",0)
 
-  constructor(private _actividadesService: ActividadesService, private _router: Router, private _route:ActivatedRoute) {
+  constructor(private _actividadesService: ActividadesService, private _router: Router, private _route: ActivatedRoute) {
 
 
   }
@@ -31,28 +31,10 @@ export class ActividadComponent implements OnInit {
       this._aid = +params.get('aid'))
     this._actividadesService.getActivityFromApiByAid(this._aid).subscribe(res => this.currentActivity = res);
     console.log(this._aid)
+    console.log("Estamos en actividad")
     console.log(this.currentActivity)
-    
 
     // console.log(this.currentActivity)
   }
-  // getActivityFromApiByAid() {
-    // for (let aid = 0; aid < this.activities.length; aid++) {
-    //   if (this.activities[aid] == this.currentActivity) {
-    //     this._actividadesService.getActivityFromApiByAid(aid).subscribe(lasActividadesRecibidas => {
-    //       this.currentActivity = lasActividadesRecibidas;
-
-    //     })
-
-    //   }
-
-
-
-    //   // this.activities.filter(lasActividadesRecibidas => {
-    //   //   this.currentActivity = lasActividadesRecibidas;
-    //   console.log(this.currentActivity)
-
-    // }
-  // this._actividadesService.getActivityFromApiByAid;
-  // }
 }
+
