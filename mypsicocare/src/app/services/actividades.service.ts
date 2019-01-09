@@ -1,19 +1,34 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Activity } from '../Modelos/Activity';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ActividadesService {
 
-  API_URL='http://192.168.101.185:8080/Psicocare/api/activities';
+  API_URL='http://localhost:8080/Psicocare/api/activities';
  
-  constructor (private _http:HttpClient) {
-  }
+  constructor (private _http:HttpClient) { }
+ 
 
   getActivityFromApi():Observable<Activity[]>{
-    return this._http.get<Activity[]>(this.API_URL);
+    const ApiActivities  = this._http.get<Activity[]>(this.API_URL);
+    console.log("estamos aqui!!");
+    return ApiActivities;
+    
+  }
+
+ 
+  
+  getActivityFromApiByAid(aid: number):Observable<Activity>{
+    const ApiActivityAid = this._http.get<Activity>('${this.API_URL}/${aid}')
+    console.log(ApiActivityAid);
+    
+   return ApiActivityAid;
+
   }
 }

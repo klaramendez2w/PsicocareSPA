@@ -14,7 +14,7 @@ import { ConfigComponent } from './config/config.component';
 
 const routes: Routes = [
   { path: "login", component:LoginComponent , pathMatch: "full" },
-  { path: "actividades", component: ActividadComponent, pathMatch: "full" },
+  { path: "homeactivities/activity/:aid", component: ActividadComponent, pathMatch: "full" },
   { path: "header", component: HeaderComponent, pathMatch: "full" },
   { path: "homeactivities", component: HomeactividadesComponent, pathMatch: "full" },
   { path: "about", component: AboutComponent, pathMatch: "full" },

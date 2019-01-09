@@ -1,11 +1,13 @@
-<h1>Activities</h1>
-
-<ul>
-    <li><a [routerLink]="['activity/1']"></a><button>{{anActivity.statement}} </button></li>
-    <li><button>{{anActivity.statement}} </button></li>
-    <li></li>
-</ul>
-<ul *ngFor="let anActivity of Activities">
-    <li>{{anActivity.statement}}  </li>
-    <a [routerLink]="['activity/1']"></a>
-  </ul>
+<section>
+    <h1>Activities</h1>
+    <ul *ngFor="let anActivity of activities">
+        <li>
+            <!-- <a [routerLink]="['activity']"> -->
+                <button (click)="onClick(anActivity.aid)" value="{{anActivity.aid}}">
+                    {{anActivity.aid}} | {{anActivity.statement}} 
+                </button>
+            <!-- </a> -->
+        </li>
+    </ul>
+    <div>hola</div>
+</section>
