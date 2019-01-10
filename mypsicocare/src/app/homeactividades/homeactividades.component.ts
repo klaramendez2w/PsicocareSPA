@@ -11,7 +11,7 @@ import { Activity } from '../Modelos/Activity';
 export class HomeactividadesComponent implements OnInit {
   private aid: number; 
   activities: Activity[] = null;
-  currentActivity: Activity;
+  // currentActivity: Activity;
 
   constructor(private _actividadesService: ActividadesService, private _router: Router, private _route: ActivatedRoute ) { }
 
@@ -24,7 +24,8 @@ export class HomeactividadesComponent implements OnInit {
     })
   }
   onClick(aid: number){
-    this._actividadesService.getActivityFromApiByAid(aid).subscribe(res =>{ this.currentActivity = res
+    this._actividadesService.getActivityFromApiByAid(aid).subscribe(res =>{ 
+      // this.currentActivity = res
       this._router.navigate(['homeactivities/activity',aid]);
     }
       );
