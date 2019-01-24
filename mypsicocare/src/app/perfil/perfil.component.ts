@@ -19,6 +19,10 @@ export class PerfilComponent implements OnInit {
   constructor(private _userService: UserService, private _route: ActivatedRoute, private _router:Router) { }
 
   ngOnInit() {
+    
+    if (!localStorage.getItem('token')) {
+      this._router.navigate(['/login'])
+    }
     this._userService.getUserFromAPIById(this._id).subscribe(userFromAPI => {
       console.log('userFromAPI:', userFromAPI);
       this._usuarioActual = userFromAPI;

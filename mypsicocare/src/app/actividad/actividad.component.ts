@@ -29,6 +29,10 @@ export class ActividadComponent implements OnInit {
   
 
   ngOnInit() {
+    
+    if (!localStorage.getItem('token')) {
+      this._router.navigate(['/login'])
+    }
     this._route.paramMap.subscribe(params =>
       this._aid = +params.get('aid'))
     this._actividadesService.getActivityFromApiByAid(this._aid).subscribe(res => this.currentActivity = res);

@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
 
     if (localStorage.getItem('token')) {
-      this._router.navigate(['/menu'])
+      this._router.navigate(['/homeactivities/', jwt_decode.sub])
     }
 
   }

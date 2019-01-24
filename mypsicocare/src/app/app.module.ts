@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule }    from '@angular/forms';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,14 +10,17 @@ import { HeaderComponent } from './header/header.component';
 import { HomeactividadesComponent } from './homeactividades/homeactividades.component';
 import { AboutComponent } from './about/about.component';
 import { ProgressComponent } from './progress/progress.component';
-import { TestComponent } from './test/test.component';
+import { NTestComponent } from './ntest/ntest.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { MenuComponent } from './menu/menu.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ConfigComponent } from './config/config.component';
-import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { ResultsComponent } from './results/results.component';
 import { ChartsModule } from 'ng2-charts';
+
+
 
 
 
@@ -30,11 +33,13 @@ import { ChartsModule } from 'ng2-charts';
     HomeactividadesComponent,
     AboutComponent,
     ProgressComponent,
-    TestComponent,
+    NTestComponent,
     PerfilComponent,
     WelcomeComponent,
     MenuComponent,
     ConfigComponent,
+    HomeComponent,
+    ResultsComponent
    
     
   ],
@@ -43,11 +48,14 @@ import { ChartsModule } from 'ng2-charts';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
     ReactiveFormsModule,
-    ChartsModule
+    ChartsModule,
+   
+    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  //En caso de error aqui habia usarioservice (arriba)
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

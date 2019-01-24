@@ -23,6 +23,10 @@ export class HomeactividadesComponent implements OnInit {
     // this._route.paramMap.subscribe(params => this.aid = +params.get('aid'));
     this._actividadesService.getActivityFromApi().subscribe(lasActividadesRecibidas => {
       this.activities = lasActividadesRecibidas;
+      
+    if (!localStorage.getItem('token')) {
+      this._router.navigate(['/login'])
+    }
     
     })
     //  this._usuariosServices.getUserFromApiByUid(this._id).subscribe(res => this.currentUser = res);

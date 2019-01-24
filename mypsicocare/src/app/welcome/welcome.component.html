@@ -1,3 +1,130 @@
-<p>
-  welcome works!
-</p>
+
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"> 
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+      rel="stylesheet" id="bootstrap-css">-->
+    
+    <!-- Website CSS style -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/main.css"> -->
+    
+    <!-- Website Font style -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"> -->
+    
+    <!-- Google Fonts 
+    <link href='https://fonts.googleapis.com/css?family=Passion+One'
+      rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen'
+      rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./CSS/csgeneral.css">
+    <link rel="stylesheet" href="./CSS/registerstyle.css">
+    -->
+   
+    <h1>{{ title }}</h1>
+    <body>
+        <div class="container">
+          <div class="row main">
+            <div class="panel-heading">
+              <div class="panel-title text-center">
+                <div id="titulo">
+                  <h1>Welcome to PsicoCare</h1>
+                  <!-- En caso de excepcion, mostrar error -->
+                  <div id=errorsubida> <!-- ${errorsubida}--></div>
+      
+                  <hr />
+                </div>
+              </div>
+              <div id="errorsubidaserver" class="error hide">Uploading error. Please try again later.</div>
+              <div class="main-login main-center" id="mainbox">
+                <div id="mensaje" class="error hide">Complete the register</div>
+                <form id='loginform' class="form-horizontal" method="POST">
+                  <div id="tunombre" class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Your
+                      Name</label>
+                    <div class="cols-sm-10">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span> <input
+                          autofocus type="text" class="form-control" name="name" id="name" placeholder="Enter your Name"
+                          minlength="3" required />
+                        <div id="errorname" class="error hide">Introduce a longer name.</div>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div id="tuemail" class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Your
+                      Email</label>
+                    <div class="cols-sm-10">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span> <input
+                          type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
+                        <div id="erroremail" class=" error hide">Introduce a valid email adress.
+                          </div>
+                          <div id="errorregistroemail" class=" error hide">Email adress is already registered.
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div id="tuusuario" class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Username</label>
+                    <div class="cols-sm-10">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span> <input type="text"
+                          class="form-control" name="username" id="username" placeholder="Enter your Username" required
+                          minlength="3" />
+                        <div id="errorusuario" class=" error hide">Introduce a valid username.</div>
+                          <div id="errorregistrousuario" class=" error hide">Username is already registered.</div>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div id="tupassword" class="form-group">
+                    <label for="password" class="cols-sm-2 control-label">Password</label>
+                    <div class="cols-sm-10">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span> <input
+                          type="password" class="form-control" name="password" id="password" placeholder="Enter your Password"
+                          minlength="4" maxlength="18"  required />
+                        <div id="errorpassword" class=" error hide">Introduce a valid password.
+                        Password format must contains between 4-18 characters.</div>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div id="tuconfirmacion" class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Confirm your password</label>
+                    <div class="cols-sm-10">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span> <input
+                          type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm your Password"
+                          pattern="[a-zA-Z0-9]*" required />
+                        <div id="passwordnomatch" class="error hide">The passwords don't match.</div>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div id="boton" class="form-group ">
+                    <button type="submit" id="register" class="btn btn-primary btn-lg btn-block login-button btn-outline-primary">Register</button>
+                    
+                  </div>
+                 
+                
+                </form>
+                <div id="login" class="login-register">
+                    <a href="/login">Sign in instead</a>  </div>
+              </div>
+            </div>
+            
+          </div>
+          </div>
+      </body>
+      
+    <!--<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script src="./JS/jquery-3.3.1.min.js"></script>
+    <script src="./JS/scriptwelcome.js"></script>
+    <script
+      src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+    </html>-->
+

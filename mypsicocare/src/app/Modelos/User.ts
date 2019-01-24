@@ -12,7 +12,7 @@
             set name(name){this._name=name; }
             set email(email){this._email=email; }
             set password(password){this._password=password; }
-            get username(username){this._username;}
+            set username(username){this._username;}
         
         
         

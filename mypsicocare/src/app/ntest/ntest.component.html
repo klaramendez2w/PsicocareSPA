@@ -1,0 +1,366 @@
+<div *ngIf="_paso==0">
+
+    <h1>{{title}}</h1>
+    <!--Pregunta 1-->
+    <h2> You are about to start <span>PsicoTest</span><br> <br>Take your time to read carefully and complete 
+      <br> the whole test of 5 questions.<br><br> Please click on <span>'Start Test' button when you are ready</span> </h2>
+  
+    
+        <footer>
+  
+            <table style="align-content: center; margin:auto;">
+              <tr>
+  
+                
+                <td>  <a  id="res0" href="./test/1"> Start Test </a> </td>
+         
+              </tr>
+            </table>
+         
+          </footer>
+      
+  
+  </div>
+
+
+<div *ngIf="_paso==1">
+
+  <h1>{{title}}</h1>
+  <!--Pregunta 1-->
+  <h2>{{pregunta1}}</h2>
+
+  <form #testform="ngForm" (ngSubmit)="siguientePaso()">
+    <table style="align-content: center; margin: auto;">
+      <tr>
+        <td>
+            <label>
+                <input id="q1" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta1" [value]="1">
+                <span> I am not particulary discouraged about my
+                    future.</span>
+              </label>
+
+          </td>
+      </tr>
+      <tr>
+        <td><label>
+            <input id="q1" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta1" [value]="2">
+            <span> I feel discourage about my future</span>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td><label>
+            <input id="q1" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta1" [value]="3">
+            <span> I feel I have nothing to look forward to</span>
+          </label></td>
+      </tr>
+      <tr>
+        <td><label>
+            <input id="q1" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta1" [value]="4">
+            <span> I feel the future is hopeless</span>
+          </label></td>
+      </tr>
+      <!--Cambio y envio de pregunta 1-->
+    </table>
+    <footer>
+
+        <table style="align-content: center; margin:auto;">
+          <tr>
+            
+            <td><label id="res2" for="total">
+                <p>&nbsp;&nbsp;Total progress 1 out of 5</p></label>
+            </td>
+            <td>
+              <div id="test1" class="progress-example; text-align:left;">
+                <progress id="total" name="total" max="5" value="1">
+                  1 of 5
+                </progress> </div>
+                 
+            </td>
+          <!-- <td>  <a  id="res2" href="./test/2"><img class="ida" src="assets\IMG\arrow.png"> </a> </td> -->
+          <td> <input  type="image" class="ida" src="assets\IMG\arrow.png"></td>
+          </tr>
+        </table>
+     
+      </footer>
+  </form>
+
+</div>
+
+<div *ngIf="_paso==2">
+
+  <h1>{{title}}</h1>
+
+  <!--Pregunta 2-->
+  <h2>{{pregunta2}}</h2>
+  
+    <form #testform="ngForm" (ngSubmit)="siguientePaso()">
+        <table style="align-content: center; margin: auto;">
+      <tr>
+        <td style="text-align: center;"><label>
+            <input id="q21" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta2" [value]="1">
+            <span></span>
+          </label> </td>
+        <td style="text-align: center;"><label>
+            <input id="q22" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta2" [value]="2">
+            <span></span>
+          </label> </td>
+        <td style="text-align: center;"><label>
+            <input id="q23" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta2" [value]="3">
+            <span></span>
+          </label></td>
+        <td style="text-align: center;"><label>
+            <input id="q24" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta2" [value]="4">
+            <span></span>
+          </label></td>
+        <td style="text-align: center;"><label>
+            <input id="q25" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta2" [value]="5">
+            <span></span>
+          </label></td>
+      </tr>
+
+      <tr>
+        <td>Mostly agree&nbsp;</td>
+        <td>&nbsp;Partly agree&nbsp;</td>
+        <td>&nbsp;Neutral&nbsp;</td>
+        <td>&nbsp;Partly disagree&nbsp;</td>
+        <td>&nbsp;Mostly disagree&nbsp;</td>
+      </tr>
+      <div>
+        <br> <br>
+      </div>
+      <!--Cambio y envio de pregunta 2-->
+    </table>
+    <footer>
+
+      <table style="align-content: center; margin:auto;">
+        <tr>
+          <td><a id="res1" href="./test/1"><img class="vuelta" src="assets\IMG\arrow.png"></a></td>
+          <td><label id="res2" for="total">
+              <p>&nbsp;&nbsp;Total progress 2 out of 5</p></label>
+          </td>
+          <td>
+            <div id="test2" class="progress-example; text-align:left;">
+              <progress id="total" name="total" max="5" value="2">
+                2 of 5
+              </progress> </div>
+             <!-- <input id="enviorespuesta" type="submit" value="Next">-->
+               
+          </td>
+        <!--  <td> <a  id="res2" href="./test/3"><img class="ida" src="assets\IMG\arrow.png"> </a> </td>-->
+        <td> <input  type="image" class="ida" src="assets\IMG\arrow.png"></td>
+        </tr>
+      </table>
+   
+    </footer>
+    </form>
+ 
+
+</div>
+
+<div *ngIf="_paso==3">
+  <h1>{{title}}</h1>
+  <!--Pregunta 3-->
+  <h2>{{pregunta3}}</h2>
+  
+    <form #testform="ngForm" (ngSubmit)="siguientePaso()">
+        <table style="align-content: center; margin: auto;">
+      <tr>
+        <td> <label>
+            <input id="q31" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta3" [value]="1">
+            <span></span>
+          </label>  Mostly agree </td>
+        
+      </tr>
+      <tr>
+        <td><label>
+            <input id="q32" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta3" [value]="2">
+            <span></span>
+          </label> Partly agree</td>
+        
+      </tr>
+      <tr>
+        <td><label>
+            <input id="q33" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta3" [value]="3">
+            <span></span>
+          </label>Neutral</td>
+        
+      </tr>
+      <tr>
+        <td><label>
+            <input id="q34" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta3" [value]="4">
+            <span></span>
+          </label>Partly disagree</td>
+        
+      </tr>
+      <tr>
+        <td><label>
+            <input id="q35" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta3" [value]="5">
+            <span></span>
+          </label>Mostly disagree</td>
+        
+      </tr>
+      <!--Cambio y envio de pregunta 3-->
+    </table>
+    <footer>
+
+      <table style="align-content: center; margin:auto;">
+        <tr>
+          <td><a id="res2" href="./test/2"><img class="vuelta" src="assets\IMG\arrow.png"></a></td>
+          <td><label id="res2" for="total">
+              <p>&nbsp;&nbsp;Total progress 3 out of 5</p></label>
+          </td>
+          <td>
+            <div id="test3" class="progress-example; text-align:left;">
+              <progress id="total" name="total" max="5" value="3">
+                3 of 5
+              </progress> </div>
+
+             <!-- <input id="enviorespuesta" type="submit" value="Next"> -->
+
+               
+          </td>
+        
+         <td> <input  type="image" class="ida" src="assets\IMG\arrow.png"></td>
+        </tr>
+      </table>
+   
+    </footer>
+    </form>
+
+
+</div>
+
+<div *ngIf="_paso==4">
+  <h1>{{title}}</h1>
+  <h2>{{pregunta4}}</h2>
+    <form #testform="ngForm"(ngSubmit)="siguientePaso()">
+
+        <table style="align-content: center; margin: auto;">
+            <tr>
+              <td style="text-align: center;"><label>
+                  <input id="q21" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta4" [value]="1">
+                  <span></span>
+                </label> </td>
+              <td style="text-align: center;"><label>
+                  <input id="q22" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta4" [value]="2">
+                  <span></span>
+                </label> </td>
+              <td style="text-align: center;"><label>
+                  <input id="q23" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta4" [value]="3">
+                  <span></span>
+                </label></td>
+              <td style="text-align: center;"><label>
+                  <input id="q24" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta4" [value]="4">
+                  <span></span>
+                </label></td>
+              <td style="text-align: center;"><label>
+                  <input id="q25" name="respuestainput" type="radio" [(ngModel)]="_respuestas.respuesta4" [value]="5">
+                  <span></span>
+                </label></td>
+            </tr>
+      
+            <tr>
+              <td>Always&nbsp;</td>
+              <td>&nbsp;Often&nbsp;</td>
+              <td>&nbsp;Sometimes&nbsp;</td>
+              <td>&nbsp;Hardly ever&nbsp;</td>
+              <td>&nbsp;Never&nbsp;</td>
+            </tr>
+            <div>
+              <br> <br>
+            </div>
+            <!--Cambio y envio de pregunta 4-->
+            
+          </table>
+
+        <!--  <div id="centrodiv" style="margin-left: 38%;">
+            <input style="display: inline-block;" class="botoninput" type="button" id="5" name="respuestainput" [(ngModel)]="_respuestas.respuesta4"  [value]="Very often" onclick="botofuncion(this.id)"> 
+            <input style="display: inline-block;" class="botoninput" type="button" id="4" name="respuestainput" [(ngModel)]="_respuestas.respuesta4" name="respuestainput" [value]="Fairly often" onclick="botofuncion(this.id)"> 
+            <input style="display: inline-block;" class="botoninput" type="button" id="3" name="respuestainput" [(ngModel)]="_respuestas.respuesta4" name="respuestainput" [value]="Sometimes" onclick="botofuncion(this.id)"> 
+            <input style="display: inline-block;" class="botoninput" type="button" id="2" name="respuestainput" [(ngModel)]="_respuestas.respuesta4" name="respuestainput" [value]="Almost never" onclick="botofuncion(this.id)"> 
+            <input style="display: inline-block;" class="botoninput" type="button" id="1" name="respuestainput" [(ngModel)]="_respuestas.respuesta4" name="respuestainput" [value]="Never"onclick="botofuncion(this.id)">
+          </div>
+  
+        <div>
+        <br> 
+        </div>
+      -->
+      <footer>
+
+          <table style="align-content: center; margin:auto;">
+            <tr>
+              <td><a id="res2" href="./test/3"><img class="vuelta" src="assets\IMG\arrow.png"></a></td>
+              <td><label id="res4" for="total">
+                  <p>&nbsp;Total progress 4 out of 5&nbsp;</p></label>
+              </td>
+              <td>
+                <div id="test5" class="progress-example; text-align:left;">
+                  <progress id="total" name="total" max="5" value="4">
+                    4 of 5
+                  </progress> </div>
+                 <!--  <input id="enviorespuesta" type="submit" value="Next">-->
+                   
+              </td>
+           
+            <td> <input  type="image" class="ida" src="assets\IMG\arrow.png"></td>
+            </tr>
+          </table>
+       
+        </footer>
+      </form>
+  
+</div>
+
+<div *ngIf="_paso==5">
+  <h1>{{title}}</h1>
+  <!--Pregunta 5-->
+  <h2>{{pregunta5}}</h2>
+  <form #testform="ngForm" (ngSubmit)="siguientePaso()">
+  
+    <table style="align-content: center; margin: auto; font-size: 19px; align-items: center; width: 500px;">
+      <tr>
+        
+        <td>
+
+            <input type="range" name="respuestainput" [(ngModel)]="_respuestas.respuesta5" id="test5" value="1" min="0" max="5" 
+             oninput="test5_disp.value = test5.value">
+            <output  id="test5_disp"></output>
+          
+         <!-- <p id="slider" style="margin: auto;" class="range-field">
+            <input name="respuestainput" [(ngModel)]="_respuestas.respuesta5" type="range" min="1" max="5" id="test5">  
+          </p>-->
+          
+        </td>
+        
+      </tr>
+      
+    </table>
+  
+    <!--Cambio y envio de pregunta 5-->
+    <footer>
+
+      <table style="align-content: center; margin:auto;">
+        <tr>
+          <td><a id="res2" href="./test/4"><img class="vuelta" src="assets\IMG\arrow.png"></a></td>
+          <td><label id="res2" for="total">
+              <p>&nbsp;&nbsp;Total progress 5 out of 5</p></label>
+          </td>
+          <td>
+            <div id="test5" class="progress-example; text-align:left;">
+              <progress id="total" name="total" max="5" value="5">
+                5 of 5
+              </progress> </div>
+               <input id="enviartest" type="submit" value="Finish"> 
+          </td>
+          <td> </td>
+   
+        </tr>
+      </table>
+   
+    </footer>
+  </form>
+
+ <!--<pre>{{_respuestas|json}}</pre>-->
+
+</div>

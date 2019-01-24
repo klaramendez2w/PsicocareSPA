@@ -1,3 +1,164 @@
-<p>
-  config works!
-</p>
+
+<h1>Configuration</h1>
+
+  <section class="container" >
+
+      <div class="row">
+              <h2 id="h2alerts">Alerts</h2>
+
+          <div><p>&nbsp;&nbsp;&nbsp;Notifications</p>
+              <!-- Alertas-->
+              &nbsp; &nbsp; &nbsp;
+              <label class="switch">
+              <input type="checkbox" id="heroes" [checked]="toggleHeroes" (click)="toggleHeroes()">
+              <span class="slider"></span>
+            </label>
+              <br>          <br>
+
+                  <div *ngIf="showHeroes" >
+                      &nbsp;&nbsp;&nbsp;Alert frequency<br>
+                      <!-- HTML5 Range-->
+
+
+
+
+
+                  </div>
+
+                  <div  *ngIf="showHeroes" >
+                        <p> &nbsp;&nbsp;&nbsp;Vibration<br></p>
+                         <!-- Switch --> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label class="switch">
+                           <input type="checkbox">
+                           <span class="slider"></span>
+                         </label>
+   
+                     </div>
+
+
+                  <div  *ngIf="showHeroes" >
+                      &nbsp;&nbsp;&nbsp;Sound
+                      <!--Select-->
+                      <div class="input-field col s12" >
+                          &nbsp;&nbsp;&nbsp;
+
+
+
+
+
+                          <select>
+                              <option value="" disabled selected>Choose your option</option>
+                              <option value="1">Sound Off</option>
+                              <option value="2">Music A</option>
+                              <option value="3">Music B</option>
+                          </select>
+                      </div>
+                  </div>
+
+
+            
+              <br>
+
+                
+           
+          </div>
+      </div>
+
+      <!--AQUI TERMINA ALERTAS-->
+
+      <br>
+      <div class="row">
+          <!--AQUI EMPIEZA TEMAS-->
+    
+          <div class="col s12 m5" id="tema">
+              <h2 id="h2theme">Theme</h2>
+          </div>
+          <div class="col s12 m7">
+              <form >
+                  <p>
+                      <label>
+                          &nbsp;&nbsp;&nbsp;
+                          <input name="group1" type="radio"   [checked]="toggletheme" (click)="toggletheme(1)" />
+                          <span>Default Theme </span>
+                      </label>
+                  </p>
+                  <p>
+                      <label>
+                          &nbsp;&nbsp;&nbsp;
+                          <input name="group1" type="radio"   [checked]="toggletheme" (click)="toggletheme(2)" />
+                          <span>Ocean blue Theme</span>
+                      </label>
+                  </p>
+                  <p>
+                      <label>
+                          &nbsp;&nbsp;&nbsp;
+                          <input name="group1" type="radio"   [checked]="toggletheme" (click)="toggletheme(3)" />
+                          <span>Green moss Theme</span>
+                      </label>
+                  </p>
+                  <p>
+                      <label>
+                          &nbsp;&nbsp;&nbsp;
+                          <input name="group1" type="radio"  [checked]="toggletheme" (click)="toggletheme(4)" />
+                          <span>Orange Dawn Theme</span>
+                      </label>
+                  </p>
+                  <p>
+                      <label>
+                          &nbsp;&nbsp;&nbsp;
+                          <input name="group1" type="radio"   [checked]="toggletheme" (click)="toggletheme(5)"/>
+                          <span>Dark night Theme</span>
+                      </label>
+                  </p>
+              </form>
+          </div>
+      </div>
+<br>
+    
+
+
+
+
+
+
+
+          <div class="col s12 m5">
+              <h2 id="h2pin">Access Pin</h2>
+          </div>
+<div id="anuncioPIN" class="errorregistropin hide"> &nbsp;&nbsp;&nbsp; PIN correctly stored as </div>
+    <div id="popup1" clasS="popup hide" >
+            <div rel="title">
+               Select a PIN
+            </div>
+            <div rel="body">
+                    <div id="errorregistropin" class="errorregistropin hide" > Invalid PIN format. Numerical characters only.</div>
+                <div style="padding: 0; font-size: 11px; line-height: 150%;">
+                        <form id="loginform">
+
+                   
+                            <input id="pininput" type="password" placeholder="Set you pin" minlength="4" pattern="[0-9]*" required><br><label>Pin must contain at least 4 digits <br> </label></form>
+                <input  type="button" value="Cancel " (click)="onClick()" ><span>       &nbsp;&nbsp;&nbsp;       &nbsp;&nbsp;&nbsp;       &nbsp;&nbsp;&nbsp;</span>  <input id="continue" type="button" value="Continue " >
+                </div>
+            </div>
+           
+        </div>
+
+                
+
+<div class="box" style="width: 100%">
+        &nbsp;&nbsp;&nbsp;       &nbsp;&nbsp;&nbsp;    <input class="button" type="button" value="Set Pin " (click)="onClick()">
+
+    </div>
+    
+   
+
+
+
+  <button style="float:right;margin: 50px;font-size: large">Save</button>&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+     <br>
+     <br>   <br>
+  </section>
