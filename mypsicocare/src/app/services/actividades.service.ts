@@ -23,7 +23,6 @@ export class ActividadesService {
   }
 
  
-  
   getActivityFromApiByAid(aid: number):Observable<Activity>{
     const ApiActivityAid = this._http.get<Activity>(`${this.API_URL}/${aid}`)
     console.log(ApiActivityAid);

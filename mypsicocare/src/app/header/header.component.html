@@ -1,3 +1,41 @@
-<p>
-  header works!
-</p>
+<!-- <header>
+  <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun">
+    <mat-toolbar color="primary" class="example-toolbar">
+      <button mat-icon-button (click)="snav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h1 class="example-app-name">Responsive App</h1>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+        fixedTopGap="56">
+        <mat-nav-list>
+          <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="./IMG/backgroun menu.jpg">
+              </div>
+              <a href="#user"><img class="circle" src="./IMG/gato.png"></a>
+              <a href="#name"><span class="white-text name">Klara</span></a> <a href="#email"><span class="white-text email">ansiedadatope@gmail.com</span></a>
+            </div>
+          </li>
+          <li><a href="./menu.jsp">MENU </a></li>
+          <li>
+            <div class="divider"></div>
+          </li>
+          <li><a class="waves-effect" href="./profile">PROFILE</a></li>
+          <li><a class="waves-effect" href="./progress">PROGRESS</a></li>
+          <li><a class="waves-effect" href="./homeactivities">ACTIVITIES</a></li>
+          <li><a class="waves-effect" href="./config">OPTIONS</a></li>
+          <li><a class="waves-effect" href="./Aboutus">ABOUT</a></li>
+          <li><a class="waves-effect" href="./login">LOG OUT</a></li>
+        </mat-nav-list>
+      </mat-sidenav>
+
+      <mat-sidenav-content>
+        <p *ngFor="let content of fillerContent">{{content}}</p>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</header> -->

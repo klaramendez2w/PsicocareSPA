@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mypsicocare';
+
+  constructor(private _router: Router) { }
+
+  ngOnInit() {
+
+    if (!localStorage.getItem('token')) {
+      this._router.navigate(['/login'])
+    }
+
+  }
 }

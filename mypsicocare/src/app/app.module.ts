@@ -16,6 +16,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { MenuComponent } from './menu/menu.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ConfigComponent } from './config/config.component';
+import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
+
+
 
 @NgModule({
   declarations: [
@@ -30,14 +34,18 @@ import { ConfigComponent } from './config/config.component';
     PerfilComponent,
     WelcomeComponent,
     MenuComponent,
-    ConfigComponent
+    ConfigComponent,
+   
+    
   ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
