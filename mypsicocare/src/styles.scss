@@ -39,7 +39,7 @@ nav .brand-logo {
 
 /* HAY QUE PONER UN ID CON NOMBRE "BODYPAD" EN TODO LO QUE NO SEA EL HEADER (PONED DIVS) */
 
-#bodypad {padding: 20px}
+//#bodypad {padding: 20px} Ver en que páginas se usaba este Id, de lo contratrio borrar.
 
 body{font-family: gotham;
     font-style: normal;
@@ -48,7 +48,7 @@ color: rgb(2, 2, 37);
 background:white;
 text-align: justify;
 margin: 0;
-
+padding: 15px
 }
 @font-face {
     font-family: gotham;
@@ -62,7 +62,13 @@ h1{margin: 20px;
     background-color: rgb(157, 216, 183);
     border: rgb(157, 216, 183);
     border-radius: 15px;
-text-align: center;}
+    text-align: center;
+    color: rgb(67, 149, 216);
+    font-weight: bold;
+    font-size: 40px;
+    margin: 40px 0px 20px;
+    padding-bottom: 3px
+}
 
 h2{border: white solid 5px;
     border-radius:25px;
@@ -88,4 +94,39 @@ h2{border: white solid 5px;
     .hide-on-med-and-down {
         display: none !important;
     }
+}
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	font-weight: 100;
+	text-align: center;
+    font-size: 30px;
+    
+
+}
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: #90CAF9;
+	display: inline-block;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: rgb(67, 149, 216);
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
+
+#clockbutton{
+   
+    text-align: center;
 }

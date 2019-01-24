@@ -1,3 +1,15 @@
-<p>
-  login works!
-</p>
+<section>
+  <form #loginform="ngForm" (ngSubmit)="acceder(aid)">
+    <div><input type="email" placeholder="Email" name="email" [(ngModel)]="user.email"></div>
+    <div><input type="password" placeholder="Contraseña" name="pass" [(ngModel)]="user.pass"></div>
+    <!-- <div><button [disabled]="!loginform.valid">Acceder</button></div> -->
+    <div><input type="submit" value="Login" [disabled]="!loginform.valid"></div>
+  </form>
+</section>
+<!-- <section>
+      <form [formGroup]="loginForm" (ngSubmit)="acceder()" #loginform="ngForm">
+      <div><input type="email" placeholder="Email" name="email" formControlName="email"></div>
+      <div><input type="password" placeholder="Contraseña" name="pass" formControlName="password"></div>
+      <div><input type="submit" value="Login" [disabled]="loginForm.invalid"></div>
+    </form>
+  </section> -->

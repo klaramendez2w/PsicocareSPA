@@ -6,77 +6,63 @@
       <div *ngIf="1 == currentActivity.aid">
         <div>
           <audio controls>
-            <source src="{{currentActivity.content}}" type="audio/ogg">
+            <source src="assets\media\podcastsa.mp3" type="audio/mp3">
           </audio>
         </div>
       </div>
       <div *ngIf="2 == currentActivity.aid">
-        <!-- <table>
-          <thead>
-            <tr>
-              <th>
-              <td>Important</td>
-              <td>Not important</td>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Urgent</td>
-              <td style="height: 300px;">
-                <form id="textform" method="POST">
-              <th>
-                <label for="textito"></label>
-                <textarea style="height: 200px;" onclick="cleartext(1)" name="textito" id="cuentame1" name="comment"
-                  form="textform" required maxlength="500">Enter your text here</textarea>
-              </th>
-              </td>
-
-              <td>
-              <th>
-                <textarea style="height: 200px;" onclick="cleartext(2)" ; name="textito" id="cuentame2" rows="10" cols="50"
-                  name="comment" form="textform" required maxlength="500">Enter your text here</textarea>
-              </th>
-              </td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td>Not urgent</td>
-              <td>
-              <th>
-                <textarea onclick="cleartext(3)" ; style="height: 200px; text-align: left;" name="textito" id="cuentame3"
-                  rows="10" cols="50" name="comment" form="textform" required maxlength="500">Enter your text here</textarea>
-              </th>
-              </td>
-              <td>
-              <th>
-                <textarea onclick="cleartext(4)" ; style="height: 200px;" name="textito" id="cuentame4" rows="10" cols="50"
-                  name="comment" form="textform" required maxlength="500">Enter your text here</textarea>
-              </th>
-              </td>
-            </tr>
-          </tfoot>
-        </table> -->
+          <table class="table table-hover">
+              <thead>
+                  <tr>
+                      <td>Important</td>
+                      <textarea style="height: 100px;" onclick="cleartext(1)" name="textito" id="cuentame1" name="comment"
+                      form="textform" required maxlength="500">Type here the thoughts that are IMPORTANT </textarea>
+                      <td>Not important</td>
+                      <textarea style="height: 100px;" onclick="cleartext(1)" name="textito" id="cuentame1" name="comment"
+                      form="textform" required maxlength="500">Type here the thoughts that are NOT IMPORTANT</textarea>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td >Urgent</td>
+                      <textarea style="height: 100px;" onclick="cleartext(1)" name="textito" id="cuentame1" name="comment"
+                      form="textform" required maxlength="500">Type here the thoughts that are URGENT</textarea>
+                      <td>Not Urgent</td>
+                      <textarea style="height: 100px;" onclick="cleartext(1)" name="textito" id="cuentame1" name="comment"
+                      form="textform" required maxlength="500">Type here the thoughts that are NOT URGENT</textarea>
+                  </tr>
+              </tbody>
+          </table> 
       </div>
       <div *ngIf="3 == currentActivity.aid">
-        <div class="video-container">
-          <video class="responsive-video" controls>
-            <iframe width="300" height="300" type="video/mp4" frameborder="0" allowfullscreen></iframe>
-            <source src="{{currentActivity.content}}">
-            Video is not supported by your browser
-          </video>
+              
+        <div class="video">
+            <video class="responsive-video" controls (click)="toggleVideo()" #videoPlayer>
+                <source src="assets\media\ANXIOUS+_+Hazel+Hayes.mp4" type="video/mp4" />
+                <iframe width="300" height="300" type="video/mp4" frameborder="0" allowfullscreen></iframe>
+                Browser not supported
+            </video>
         </div>
       </div>
       <div *ngIf="4 == currentActivity.aid">
         <div id="clockdiv" class="center">
           <div>
-            <span class="minutes"></span>
+            <span class="minutes">{{ minutes | number: '2.0' }}</span>
             <div class="smalltext">Minutes</div>
           </div>
+
           <div>
-            <span class="seconds"></span>
+            <span class="seconds">{{ seconds | number: '2.0' }}</span>
             <div class="smalltext">Seconds</div>
+          </div>
+        </div>
+        
+          <div class="row">
+            <div class="col s12" id="clockbutton">
+              <button (click)="togglePause()" class="btn waves-effect waves-light">
+                {{ buttonLabel }}
+              </button>
+            
           </div>
         </div>
       </div>

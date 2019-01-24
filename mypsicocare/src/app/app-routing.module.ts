@@ -14,9 +14,9 @@ import { ConfigComponent } from './config/config.component';
 
 const routes: Routes = [
   { path: "login", component:LoginComponent , pathMatch: "full" },
-  { path: "homeactivities/activity/:aid", component: ActividadComponent, pathMatch: "full" },
+  { path: "homeactivities/activity/:aid", component: ActividadComponent, pathMatch: "full", },
   { path: "header", component: HeaderComponent, pathMatch: "full" },
-  { path: "homeactivities", component: HomeactividadesComponent, pathMatch: "full" },
+  { path: "homeactivities/:id", component: HomeactividadesComponent, pathMatch: "full" },
   { path: "about", component: AboutComponent, pathMatch: "full" },
   { path: "test", component: TestComponent, pathMatch: "full" },
   { path: "progress", component: ProgressComponent, pathMatch: "full" },
