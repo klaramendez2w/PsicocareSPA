@@ -1,0 +1,18 @@
+/*if{
+
+}else { // si los datos introducidos son incorrectos,y no se valida el formulario, aparecen los errores correspondientes.
+
+    if (!name.checkValidity()) {
+        document.getElementById('errorusername').classList.remove('esconder');
+    }
+    if (!email.checkValidity()) {
+        document.getElementById('errorpass').classList.remove('esconder');
+    }
+ 
+    if (!username.checkValidity()) {
+        document.getElementById('erroremail').classList.remove('esconder');
+    }
+ 
+ }*/
+ 
+ 

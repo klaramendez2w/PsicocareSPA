@@ -1,3 +1,56 @@
-<p>
-  perfil works!
-</p>
+<h1 align="center">MY PROFILE</h1>
+<p align="center">If you wish, you can modify any of the following data so your PsicoCare account will be totally
+  updated.</p>
+<section>
+
+  <form #userform="ngForm" (ngSubmit)="updateUser()" method="post" class="form-horizontal" novalidate>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="usuario">User:</label>
+      <div class="col-sm-8">
+        <input required [(ngModel)]="_usuarioActual.name" name="name" type="text" placeholder="name" class="form-control"
+          minlength="5" maxlength="10">
+      </div>
+    </div>
+    
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="username">Username:</label>
+      <div class="col-sm-8">
+        <input required [(ngModel)]="_usuarioActual.username" name="username" type="text" placeholder="username" class="form-control"
+          minlength="5" maxlength="10">
+      </div>
+    </div>
+    
+
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="password">Password:</label>
+      <div class="col-sm-8">
+        <input class="form-control" pattern="[a-zA-Z0-9]*" required [(ngModel)]="_usuarioActual.password" name="password" disabled
+          type="text" placeholder="Password is hidden for security">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">E-mail:</label>
+      <div class="col-sm-8">
+        <input class="form-control" required [(ngModel)]="_usuarioActual.email" name="email" type="text" placeholder="email">
+      </div>
+    </div>
+    
+
+
+    <div class="col-sm-offset-7 col-sm-2" align="center">
+      <button class="btn">Save changes</button>
+    </div>
+
+
+
+
+  </form>
+
+  <div class="col-sm-offset-7 col-sm-2" align="center">
+    <button class="btn" (click)="deleteUser(id)">Delete account</button>
+  </div>
+</section>
